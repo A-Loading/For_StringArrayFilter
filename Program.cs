@@ -1,4 +1,6 @@
 ﻿using System;
+#nullable disable// магическое заклинание уберающие  warning CS8601
+// warning CS8601: Возможно назначение допускающее значение NULL.
 
 class Program
 {
@@ -23,9 +25,10 @@ class Program
 			
 			// добавляем элементы в масив
 			
+			Console.WriteLine($"введите элементы масива");
 			for (int i = 0; i < number; i++)
 			{
-				Console.WriteLine($"введите элемент[{i+1}/{number}] масива");
+				Console.Write($"[{i+1}/{number}]:	");
 				arr[i] = Console.ReadLine();
 			}
 			
@@ -38,7 +41,7 @@ class Program
 			*/
 		}
 		
-        //дебаг вывод
+        /*/  дебаг вывод
 		Console.WriteLine($"╬---╬	>3	╬");
 		PrintArray(args);
 		Console.WriteLine($"╬---╬		╬");//*/
@@ -59,7 +62,7 @@ class Program
 		// изменяем размер масива избавляясь от пустых ячеек
 		Array.Resize(ref new_array, new_arr_leng);
 		
-		
+		// выводим масив
 		Console.WriteLine("");
 		Console.WriteLine("новый массив");
 		PrintArray(new_array);		
